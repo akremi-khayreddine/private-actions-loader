@@ -4,7 +4,7 @@ const github = require('@actions/github');
 const exec = require('@actions/exec');
 const { parse } = require("yaml");
 const { readFileSync } = require("fs");
-const { join } = require("path");
+const { join } = require("path"); 
 const { sync } = require("rimraf");
 
 
