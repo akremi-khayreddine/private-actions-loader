@@ -16,8 +16,8 @@ const workDirectory = './.private-action';
 runAction(
     token,
     repoName,
-    actionDirectory,
     workDirectory,
+    actionDirectory
 ).then(() => {
     core.info('Action completed successfully');
 }).catch(e => {
