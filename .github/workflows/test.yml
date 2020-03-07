@@ -19,5 +19,5 @@ jobs:
       - name: Test
         uses: ./
         with:
-          TOKEN: ""
-          REPO: ${{ github.repository.name }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: "akremi-khayreddine/dx-webhook"
