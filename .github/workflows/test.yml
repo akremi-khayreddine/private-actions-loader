@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Test
+name: Preview
 
 on:
   push:
@@ -24,4 +24,4 @@ jobs:
           JOB_NAME: 'test'
           JOB_STATUS: ${{ job.status }}
           RUN_ID: ${{ github.run_id }}
-          PIPELINE_ID: dx-webhook
+          PIPELINE_ID: private-actions-loader
