@@ -50,12 +50,12 @@ setInputs = (action) => {
     }
 }
 
-runAction = async (
+async function runAction(
     token,
     repoName,
     workDirectory,
     actionDirectory
-) => {
+) {
     const [repo, sha] = repoName.split('@');
 
     core.info('Masking token just in case');
