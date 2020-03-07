@@ -50,7 +50,7 @@ setInputs = (action) => {
     }
 }
 
-runAction = (
+runAction = async (
     token,
     repoName,
     workDirectory,
