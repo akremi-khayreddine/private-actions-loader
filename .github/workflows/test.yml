@@ -20,4 +20,4 @@ jobs:
         uses: ./
         with:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: "akremi-khayreddine/dx-webhook"
+          REPO: akremi-khayreddine/dx-webhook
