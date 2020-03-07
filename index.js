@@ -5,7 +5,7 @@ const exec = require('@actions/exec');
 const { parse } = require("yaml");
 const { readFileSync } = require("fs");
 const { join } = require("path"); 
-const { sync } = require("rimraf"); 
+const { sync } = require("rimraf");  
 
 
 const token = core.getInput('TOKEN', { required: true });
