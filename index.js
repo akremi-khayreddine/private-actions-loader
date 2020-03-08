@@ -9,14 +9,14 @@ const { sync } = require("rimraf");
 
 const token = core.getInput('TOKEN', { required: true });
 const repositoryName = core.getInput('REPO', { required: true });
-const actionPath = core.getInput('ACTION-PATH', { required: false });
+const actionDir = core.getInput('ACTION-PATH', { required: false });
 const workPath = './.private-action';
 
 run(
     token,
     repositoryName,
     workPath,
-    actionPath
+    actionDir
 ).then(() => {
     core.info('Action completed successfully');
 }).catch(e => {
@@ -53,7 +53,7 @@ async function run(
     token,
     repositoryName,
     workPath,
-    actionPath
+    actionDir
 ) {
     const [repo, sha] = repositoryName.split('@');
 
@@ -81,8 +81,8 @@ async function run(
 
     // if actionPath specified, join with workPath (for use when multiple actions exist in same repo)
     // if actionPath not specified, use workPath (for repo with a single action at root)
-    const actionPath = actionPath
-        ? join(workPath, actionPath)
+    const actionPath = actionDir
+        ? join(workPath, actionDir)
         : workPath;
 
     core.info(`Reading ${actionPath}`);
