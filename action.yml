@@ -1,5 +1,5 @@
-name: 'DX Private actions loader'
-description: 'Private actions loader'
+name: 'DX Use private actions'
+description: 'Use private actions'
 inputs:
   TOKEN:
     description: 'Github token'
@@ -7,8 +7,8 @@ inputs:
   REPO:
     description: 'Repository'
     required: true
-  ACTION-DIRECTORY:
-    description: 'Action directory'
+  ACTION-PATH:
+    description: 'Action path'
     required: false
 runs:
   using: 'node12'
